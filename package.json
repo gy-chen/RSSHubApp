@@ -2,7 +2,8 @@
   "name": "rsshubapp",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "bin": "./bin/RSSHubApp.js",
+  "main": "./lib",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/gy-chen/RSSHubApp/issues"
   },
-  "homepage": "https://github.com/gy-chen/RSSHubApp#readme"
+  "homepage": "https://github.com/gy-chen/RSSHubApp#readme",
+  "dependencies": {
+    "@koa/router": "^8.0.8",
+    "require-all": "^3.0.0",
+    "resolve-cwd": "^3.0.0"
+  }
 }
