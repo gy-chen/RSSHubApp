@@ -2,10 +2,12 @@
 "use strict";
 
 const { utils, middlewares, localRSSHub } = require("../lib/");
+const setting = utils.loadSetting();
 const app = localRSSHub.requireRSSHubApp();
 
 const routesMiddleware = utils.findRSSHubRoutesMiddleware(app);
-const customRouter = middlewares.createCustomRouter(routesMiddleware);
-utils.replaceRSSHubRoutesMiddleware(app, customRouter.routes());
+const customRoutes = middlewares.loadCustomRoutes(setting);
+middlewares.attachCustomRoutesTo(routesMiddleware.router, customRoutes);
+middlewares.attachCustomRouters(routesMiddleware);
 
 localRSSHub.requireRSSHubServer();
