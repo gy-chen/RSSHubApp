@@ -10,7 +10,7 @@ npm init
 npm install rsshub
 ```
 
-Code new route scripts, then define route path and corresponding script in setting.json
+Code new route scripts. Create setting.json in the project root, then define route path and corresponding script in your setting.json.
 ```json
 {
     "routes": {
