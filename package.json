@@ -1,6 +1,6 @@
 {
   "name": "rsshubapp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "bin": "./bin/RSSHubApp.js",
   "main": "./lib",
